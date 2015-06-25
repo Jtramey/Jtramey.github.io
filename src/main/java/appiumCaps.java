@@ -1,7 +1,3 @@
-/**
- * Created by jonathon.ramey on 6/25/2015.
- */
-import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.junit.After;
@@ -40,6 +36,7 @@ public class appiumCaps {
 
     @Before
     public void setUp() throws MalformedURLException {
+        //TODO DO NOT HARD CODE THIS PATH SHOULD PUT IN REPO
         File appDir = new File("C:\\Users\\jonathon.ramey\\Documents\\Yikyak");
         File app = new File(appDir, "YikYak-2.7.3.apk");
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
