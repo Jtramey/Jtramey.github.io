@@ -37,7 +37,11 @@ public class appiumCaps {
     @Before
     public void setUp() throws MalformedURLException {
         //TODO DO NOT HARD CODE THIS PATH SHOULD PUT IN REPO
-        File appDir = new File("C:\\Users\\jonathon.ramey\\Documents\\Yikyak");
+        File classpathRoot = new File(System.getProperty("user.dir"));
+        File appDir = new File(classpathRoot, "/");
+        System.out.println(classpathRoot);
+        System.out.println(appDir);
+        //File appDir = new File("C:\\Users\\jonathon.ramey\\Documents\\Yikyak");
         File app = new File(appDir, "YikYak-2.7.3.apk");
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
         desiredCapabilities.setCapability("app", app.getAbsolutePath());
@@ -68,12 +72,21 @@ public class appiumCaps {
     @Test
     public void switchToHotPosts() {
         WebDriverWait wait = new WebDriverWait(driver, 80);
+
         getHotButton().click();
         //Will Wait forever to show POC
         wait.until(ExpectedConditions.presenceOfElementLocated(By.name("/uF013")));
 
     }
+    @Test
+    public void swipeDownToRefresh() {
+        int startx = 565, starty  = 551;
+        int endx = 591, endy = 1352;
+        int duration = 2;
+    driver.swipe(startx,starty,endx,endy,duration);
+    }
 
+    //Getters and Setters
     WebElement getHotButton() {
         return driver.findElementByName("Hot");
     }
@@ -81,6 +94,7 @@ public class appiumCaps {
 
     @After
     public void tearDown() {
+        System.out.println("Test Name: " + this.name);
         System.out.println("Test that was just run: " + this.getSessionId());
         driver.quit();
     }
