@@ -1,12 +1,13 @@
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
-
 import org.junit.rules.TestName;
 import org.openqa.selenium.By;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -16,9 +17,6 @@ import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
-
-import static junit.framework.Assert.assertEquals;
-import static junit.framework.TestCase.assertTrue;
 
 public class appiumCaps {
 
@@ -33,30 +31,25 @@ public class appiumCaps {
     @Rule
     TestName name = new TestName();
 
-
     @Before
     public void setUp() throws MalformedURLException {
-        //TODO DO NOT HARD CODE THIS PATH SHOULD PUT IN REPO
+        //Set file path to yikyak apk
         File classpathRoot = new File(System.getProperty("user.dir"));
         File appDir = new File(classpathRoot, "/");
-        System.out.println(classpathRoot);
-        System.out.println(appDir);
-        //File appDir = new File("C:\\Users\\jonathon.ramey\\Documents\\Yikyak");
         File app = new File(appDir, "YikYak-2.7.3.apk");
+        // Caps for what the appium server does
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
         desiredCapabilities.setCapability("app", app.getAbsolutePath());
+        desiredCapabilities.setCapability("platform" , "Windows");
         desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "5.0.1");
         desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Nexus 5");
         desiredCapabilities.setCapability("appiumVersion", "1.3.4");
         desiredCapabilities.setCapability("name", name.getMethodName());
 
-
         try {
 
-            // Connect to the appium server on localhost
-            this.driver = new AndroidDriver(
-                    new URL("http://127.0.0.1:4723/wd/hub"), desiredCapabilities) {
-
+            // Connect to the appium server on localhost, can be changed to different port or url
+            this.driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), desiredCapabilities) {
             };
         } catch (MalformedURLException e
                 ) {
@@ -67,7 +60,15 @@ public class appiumCaps {
         sessionId = driver.getSessionId().toString();
 
     }
-
+    
+    @Test
+    public void submitPost() {
+        getComposeButton().click();
+        getAgreeToRulesButton().click();
+        getWhatsOnYourMindTextBox().click();
+        getWhatsOnYourMindTextBox().sendKeys("Test Post, Please Ignore.");
+        getSendButton().click();
+    }
 
     @Test
     public void switchToHotPosts() {
@@ -78,19 +79,15 @@ public class appiumCaps {
         wait.until(ExpectedConditions.presenceOfElementLocated(By.name("/uF013")));
 
     }
-    @Test
-    public void swipeDownToRefresh() {
-        int startx = 565, starty  = 551;
-        int endx = 591, endy = 1352;
-        int duration = 2;
-    driver.swipe(startx,starty,endx,endy,duration);
-    }
 
     //Getters and Setters
     WebElement getHotButton() {
         return driver.findElementByName("Hot");
     }
-
+    WebElement getComposeButton() {return driver.findElementById("com.yik.yak:id/fab");}
+    WebElement getAgreeToRulesButton() { return driver.findElementById("com.yik.yak:id/btnDialogOk");}
+    WebElement getWhatsOnYourMindTextBox() { return driver.findElementByName("What's on your mind?");}
+    WebElement getSendButton() { return driver.findElementByName("Send");}
 
     @After
     public void tearDown() {
