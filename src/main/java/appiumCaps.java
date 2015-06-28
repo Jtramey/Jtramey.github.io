@@ -60,7 +60,7 @@ public class appiumCaps {
         sessionId = driver.getSessionId().toString();
 
     }
-    
+    // Test methods
     @Test
     public void submitPost() {
         getComposeButton().click();
