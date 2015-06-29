@@ -34,7 +34,7 @@ public class appiumTest {
     public void setUp() throws MalformedURLException {
         //Set file path to yikyak apk
         File classpathRoot = new File(System.getProperty("user.dir"));
-        File appDir = new File(classpathRoot, "/");
+        File appDir = new File(classpathRoot, "/Resources");
         File app = new File(appDir, "YikYak-2.7.3.apk");
         // Caps for what the appium server does
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
