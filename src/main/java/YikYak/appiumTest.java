@@ -3,11 +3,14 @@ package YikYak;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 
-
+import org.testng.Assert;
 import org.testng.ISuite;
+import org.testng.ITestContext;
+import org.testng.TestRunner;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
+
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -30,6 +33,12 @@ public class appiumTest {
 
     public String getSessionId() {
         return sessionId;
+    }
+
+    @BeforeTest
+    public void setup(ITestContext ctx) {
+        TestRunner runner = (TestRunner) ctx;
+        runner.setOutputDirectory("E:\\Users\\Jonathon\\Documents\\Coding\\YikYak-Automation\\Output");
     }
 
 
@@ -62,23 +71,26 @@ public class appiumTest {
 
     }
     // Test methods
-    //@Test
+    @Test
     public void submitPost() {
         setName("Submit Post");
         getComposeButton().click();
         getAgreeToRulesButton().click();
         getWhatsOnYourMindTextBox().click();
-        getWhatsOnYourMindTextBox().sendKeys("Test Post, Please Ignore.");
+        getWhatsOnYourMindTextBox().sendKeys("");
         getSendButton().click();
+        Assert.assertTrue(false);
     }
 
     @Test
     public void switchToHotPosts() {
+        driver.resetApp();
         WebDriverWait wait = new WebDriverWait(driver, 80);
         setName("Switch to Hot");
         getHotButton().click();
         //Will Wait forever to show POC
         //wait.until(ExpectedConditions.presenceOfElementLocated(By.name("/uF013")));
+        Assert.assertTrue(true);
 
     }
 
