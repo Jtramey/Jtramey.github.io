@@ -28,11 +28,7 @@ public class appiumTest {
 
     private AndroidDriver driver;
     private String sessionId;
-    private String name;
 
-    public String getSessionId() {
-        return sessionId;
-    }
 
     @BeforeTest
     public void setUp() throws MalformedURLException {
