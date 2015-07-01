@@ -1,4 +1,4 @@
-YikYak Automation
+Jonathon Ramey
 ===========
 
 Sample mobile application for automation testing
