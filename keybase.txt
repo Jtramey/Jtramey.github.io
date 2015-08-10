@@ -1,0 +1,67 @@
+==================================================================
+https://keybase.io/jramey
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://jonathonramey.me
+  * I am jramey (https://keybase.io/jramey) on keybase.
+  * I have a public key with fingerprint 4A68 633E 4C13 C3C4 09B2  A4BC E374 3D23 4025 B0C8
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "4a68633e4c13c3c409b2a4bce3743d234025b0c8",
+            "host": "keybase.io",
+            "key_id": "e3743d234025b0c8",
+            "kid": "0101fe3ff287ffa6de086b6432d4f88cf17f2a9e473a3bf19318f7e1f4c750cec2130a",
+            "uid": "7933c5818b10b3bbb89586c68b9a3919",
+            "username": "jramey"
+        },
+        "service": {
+            "hostname": "jonathonramey.me",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1439244314,
+    "expire_in": 157680000,
+    "prev": "e8eced8551ab42eb313a0c418e6d0630105642e388b128ac4fcc30006fb85594",
+    "seqno": 10,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.36
+Comment: https://keybase.io/crypto
+
+yMIdAnicbZJbSBRRGMd3U1s1ovKlMK1tii4kOmfOmdkzW1FUGGXqk9qDus45c2Z3
+vMxss5dcxCi6aFBZRHQnuoBK0CZR0Y0uFhFBlwcpi5IoosCKqBCyojNSb52Xj/P/
+/t/v8P84dyZmeHK9r2/55t7erRveB7dWJDxV9/35bQKx9ZQQbBOa2FgxTCvMnKhj
+WnEhKCBNwQqEDFEAKaRIVImkIUIZDCCoSxCJkkxEioUiIWLH3AmOIVqMFZs21/gl
+ZOpc/Y+/aawhAhEYDBqGhAOGoSk6E7FCFAQlHRkYUwMEDElTGQpADRIDqBBgI8CA
+gWhAFimjEoCixnGJMVxAhZDKGGACRAIJIViVsUIVTFQNqkB1jTHmWFoL4+5Gh9eU
+0F4kcC1pUuYuwM3xr29bWjxiW2O2Yi4VCVHHjtvUbubdSDweDbrD8VTUdW9gJPSX
+EyKmpfNF8oEkc2KmbQlBwJ00brpggKAqIQQBKhJYa9R0WMh0HXJAwSI/7jMs6a4N
+M8p0LMtAI0hiBAKoiRQBzBRdVCBfnqxwHWKeV8IaRQalkAMUg/AhFQlusvWWzdkc
+GtfCnBkzwzxVwmFC++2btZkeb65nfNY49y94cnMm//shly3fryk/OwvONrVU9281
+Fu4u3ezPyOvwX9hYNuvT0IsZC3a+JOWJzM+zhw8tGsr6umR6U/uXjl54ZG3NDH/Z
+udXvSF3NtVXn1yo/vNEzswf8WxYffF886ut/1NNQWoAfPtkX2pv+8HVwpDDY0XnY
+Wt448L34Ru2alSUV9TmnL/3OHrfsVd+gJ6N/eNRzfuquQ28q89ORiiWD2TkwTJvn
+Xcns0lMz20IHKu8+6P7mS/deffM8s7t65Fx4+8eNc+uSyYveY32t+/P8p45eIJEF
+ibSzp/7Z9RPK0vSmTTtSatmsbfMrppd4u46n5KfrJpVH79X4Gh6PnzNt2cS3hSfx
+oq0T9O6equqnGX8ACqIdRQ==
+=BQ/u
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jramey
+
+==================================================================
