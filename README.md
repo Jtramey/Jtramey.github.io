@@ -1,6 +1,8 @@
 Jonathon Ramey
 ===========
 
+[![Join the chat at https://gitter.im/Jtramey/Jtramey.github.io](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Jtramey/Jtramey.github.io?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Sample mobile application for automation testing
 Also for a webpage that shows pass fail information directly after running. 
 
